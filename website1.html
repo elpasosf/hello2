@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Username Checker</title>
+</head>
+<body>
+  <h1>Username Checker</h1>
+  <p>Enter your username:</p>
+  <input type="text" id="username-input">
+  <button onclick="checkUsername()">Check</button>
+  <p id="result"></p>
+
+  <script>
+    // List of valid usernames
+    const validUsernames = ["johndoe", "janesmith", "bobsmith", "alicejones"];
+
+    function checkUsername() {
+      // Get the input value
+      const usernameInput = document.getElementById("username-input").value;
+
+      // Check if the username is in the list
+      if (validUsernames.includes(usernameInput.toLowerCase())) {
+        document.getElementById("result").textContent = "Username is valid!";
+      } else {
+        document.getElementById("result").textContent = "Username is not valid.";
+      }
+    }
+  </script>
+</body>
+</html>
